@@ -6,10 +6,10 @@ const Filter = require('bad-words')
 const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
-const { generateMessage,generateLocationMessage } = require('./src/utils/messages')
-const {addUser,removeUser,getUsersInRoom,getUser} = require('./src/utils/users')
+const { generateMessage,generateLocationMessage } = require('./messages')
+const {addUser,removeUser,getUsersInRoom,getUser} = require('./users')
 const port =  process.env.PORT || 3000
-const publicDirectoryPath  = path.join(__dirname, '../public')
+const publicDirectoryPath  = path.join(__dirname, 'public')
 
 app.use(express.static(publicDirectoryPath))
 
