@@ -29,7 +29,7 @@ io.on('connection',(socket)=>{
         
         socket.join(user.room)
         
-        socket.emit('message',generateMessage('Admin','Welcome!'));
+        socket.emit('message',generateMessage('Admin','Welcome!\n1. Type your messages in the chat box given below.\n2. You can also share your location!3. To disconnect from the chatroom, simply close the tab.'));
         socket.broadcast.to(user.room).emit('message',generateMessage('Admin',`${user.username} has joined!`))
         
         io.to(user.room).emit('roomData',{
