@@ -1,7 +1,6 @@
 const users = []
 
 //addUser, removeUser,getUser,getUsersInRoom
-
 const addUser = ({ id, username, room })=>{
     //Clean the data
     username = username.trim().toLowerCase()
@@ -22,7 +21,7 @@ const addUser = ({ id, username, room })=>{
     //validate username
     if(existingUser){
         return {
-            error:'Username is in use!'
+            error:'Username is in use! Please choose a different one.'
         }
     }
 
